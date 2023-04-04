@@ -1,10 +1,10 @@
 // Ops! A aplicação está quebrada!!
 // Implemente a Store nesse arquivo e o Provider no arquivo ./src/index.js
 // para a aplicação voltar a funcionar!
-import { createStore } from 'redux';
+import { legacy_createStore as createStore } from 'redux';
+import  defeatSaga  from './reducers/cosmoReducer.js'
 
-const reducer = (state = INITIAL_STATE, action) => state;
 
-const store = createStore(reducer, composeWithDevTools());
+const store = createStore(defeatSaga);
 
 export default store;
